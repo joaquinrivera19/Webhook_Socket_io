@@ -37,7 +37,7 @@
 
     socket.on('response_socket', function(data) {
 
-        var markup = "<tr><td>" + data.commits[0]["timestamp"] + "</td><td>" + data.repository.full_name + "</td><td>" + data.commits[0]["message"] + "</td></tr>";
+        var markup = "<tr><td>" + data.commits[0]["timestamp"] + "</td><td>" + data.repository.full_name + "</td><td><a href='" + data.commits[0]["url"] + "'>" + data.commits[0]["message"] + "</a></td></tr>";
         $("#table_jr").prepend(markup);
         //$("#table_jr").append(markup);
 
